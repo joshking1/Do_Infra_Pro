@@ -1,0 +1,7 @@
+Data Types in HCL
+
+Before you learn more about loops and other features of HCL that make your code more flexible, we’ll first go over the available data types and their uses.
+
+The Hashicorp Configuration Language supports primitive and complex data types. Primitive data types are strings, numbers, and boolean values, which are the basic types that cannot be derived from others. Complex types, on the other hand, group multiple values into a single one. The two types of complex values are structural and collection types.
+
+Structural types allow values of different types to be grouped together. The main example is the resource definitions you use to specify what your infrastructure will look like. Compared to the structural types, collection types also group values, but only ones of the same type. The three collection types available in HCL that we are interested in are lists, maps, and sets.

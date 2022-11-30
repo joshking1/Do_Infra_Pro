@@ -1,0 +1,40 @@
+# Using list, a type of collection group data type to name the droplets 
+variable "droplet_names" {
+  type    = list(string)
+  default = ["first", "second", "third"]
+}
+
+# A form of collection data called list used to group similar things together. 
+# For the type, you specified that it’s a list whose element type is string, and then provided its default value. 
+# In HCL, values enumerated in brackets signify a list.
+
+# using the set collection group data type to list the names of the droplets
+
+variable "droplet_names" {
+  type    = set(string)
+  default = ["first", "second", "third", "fourth"]
+}
+# when you start with numbers, you need quotation marks 
+variable "droplet_names" {
+
+    type = map(string)
+
+    default = {
+      "1-development" = "development-droplet"
+      "2-staging" = "staging-drop-let"
+      "3-production" = "production-drop-let"
+    }
+  
+}
+# when you start with variable name, you do not need quotation marks 
+variable "droplet_names" {
+
+    type = map(string)
+
+    default = {
+      development = "development-droplet"
+      staging = "staging-drop-let"
+      production = "production-drop-let"
+    }
+  
+}
